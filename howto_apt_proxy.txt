@@ -1,0 +1,2 @@
+# cat /etc/apt/apt.conf
+Acquire::http::Proxy "http://user:passwd@proxy:port/";
