@@ -1,0 +1,6 @@
+
+In order to push in a remote repo, it must be "bare"
+(git repos are non-bare by default)
+
+See here :
+http://bitflop.com/tutorials/git-bare-vs-non-bare-repositories.html
