@@ -1,0 +1,5 @@
+dpkg --add-architecture i386
+apt-get update
+
+(apt-get install ia32-libs)
+apt-get install libc6-dev-i386
