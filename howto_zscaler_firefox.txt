@@ -1,8 +1,9 @@
-From IE, internet options, Content, Certificate
+From IE, internet options, Content, Certificates
 In Trusted root certification authorities, find the Zscaler certificate (4)
 Export each Zscaler certificate in .cer file format
 From Firefox, go to Tools,Option,Advanced,Certificates then View Certificates
-Import the Zscaler certificates .cer files through the Import button
+Import the Zscaler certificates .cer files through the Import button, and check
+every boxes.
 Maybe not all  (4) certificates are mandatory, but after that it works.
 Be carreful when Importing in firefox to import as Root Authority and not as Server
 If you have them in server list, remove them and then import as certificate authority.
