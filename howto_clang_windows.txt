@@ -1,0 +1,21 @@
+Run clang and static analyzer on windows 32 (MSYS)
+
+First, install CLANG WIN32 (recommended to install in c:\LLVM) : http://llvm.org/releases/3.7.0/LLVM-3.7.0-win32.exe
+Then, in the <clang_install>/bin path, copy scan-build files from : http://llvm.org/svn/llvm-project/cfe/trunk/tools/scan-build/
+And scan-view files : http://llvm.org/svn/llvm-project/cfe/trunk/tools/scan-view/
+Add clang bin install path to PATH
+
+Then you can compile your windows source with CLANG, like this :
+$ cd <my_build>
+$ \rm -Rf *; CXX=clang++ CC=clang ~/git/my_project/configure --prefix=`pwd`/the_install && make all check install
+You may get some extra CLANG warnings and errors not seen with eg: gcc
+
+You can the run the static analyzer like this :
+$ export CCC_CC=clang; \rm -Rf scan-build; mkdir scan-build; scan-build --use-analyzer=/c/LLVM/bin/clang -analyze-headers -o scan-build make clean all
+
+See the results :
+$ scan-view scan-build/*
+
+It will open a local windows web browser on the results
+See here for more information :
+http://pete.akeo.ie/2011/10/building-and-running-clang-static.html
