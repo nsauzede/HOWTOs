@@ -1,5 +1,7 @@
 Run clang and static analyzer on windows 32 (MSYS)
 
+Prerequisites : mingw32/MSYS, perl v5.8.8, python 2.7.10
+
 First, install CLANG WIN32 (recommended to install in c:\LLVM) : http://llvm.org/releases/3.7.0/LLVM-3.7.0-win32.exe
 Then, in the <clang_install>/bin path, copy scan-build files from : http://llvm.org/svn/llvm-project/cfe/trunk/tools/scan-build/
 And scan-view files : http://llvm.org/svn/llvm-project/cfe/trunk/tools/scan-view/
@@ -11,7 +13,7 @@ $ \rm -Rf *; CXX=clang++ CC=clang ~/git/my_project/configure --prefix=`pwd`/the_
 You may get some extra CLANG warnings and errors not seen with eg: gcc
 
 You can the run the static analyzer like this :
-$ export CCC_CC=clang; \rm -Rf scan-build; mkdir scan-build; scan-build --use-analyzer=/c/LLVM/bin/clang -analyze-headers -o scan-build make clean all
+$ export CCC_CC=clang; \rm -Rf scan-build; mkdir scan-build; scan-build --use-analyzer=/c/LLVM/bin/clang.exe -analyze-headers -o scan-build make clean all
 
 See the results :
 $ scan-view scan-build/*
