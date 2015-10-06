@@ -1,0 +1,5 @@
+
+valgrind --tool=callgrind -v ./app args..
+
+kcachegrind callgrind.out.xyz
+
