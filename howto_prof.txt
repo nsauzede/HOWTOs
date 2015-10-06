@@ -1,5 +1,11 @@
 
+-with Valgrind :
 valgrind --tool=callgrind -v ./app args..
 
 kcachegrind callgrind.out.xyz
+
+-with oprofile :
+operf --callgraph ./app args..
+
+opreport --callgraph
 
