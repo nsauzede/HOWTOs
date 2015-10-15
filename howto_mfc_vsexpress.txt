@@ -7,9 +7,25 @@ Shortly : download and install Windows DDK from microsoft website
 Then, in Visual Studio Express, go to : Tools / Options / Projects and Solutions / VC++ Directories / Win32 :
 
 -Include files
-Here, add in a new blank line :
+Here, add in two new blank lines :
 C:\WinDDK\7600.16385.1\inc\mfc42
+C:\WinDDK\7600.16385.1\inc\atl30
 
 -Library files
 Here, add in a new blank line :
 C:\WinDDK\7600.16385.1\lib\Mfc\i386
+
+Note : if you have some localized resources, eg: in <project>.rc, you have :
+
+..
+//#include "l.fra\afxres.rc"          // Standard components
+..
+
+With whatever language you use (here : french), just replace line by :
+
+..
+#include "afxres.rc"          // Standard components
+..
+
+Also : note that you can only build and run in "Release" configuration; the "debug" configuration is not supported.
+
