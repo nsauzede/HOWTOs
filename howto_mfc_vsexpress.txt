@@ -21,6 +21,8 @@ Configuration : All configurations
 Configuration Properties : General
 Use of MFC : Use MFC in a Shared DLL
 
+Then, you MUST choose the "Release" configuration to build and run; the "debug" configuration is not supported.
+
 Note : if you have some localized resources, eg: in <project>.rc, you have :
 ..
 //#include "l.fra\afxres.rc"          // Standard components
@@ -36,7 +38,3 @@ Note : if you have dependencies on old system resources no longer available, com
 //AFX_IDB_MINIFRAME_MENU      BITMAP  DISCARDABLE     "res\\minifwnd.bmp"
 //AFX_IDB_CHECKLISTBOX_NT     BITMAP  DISCARDABLE     "res\\ntcheck.bmp"
 //AFX_IDB_CHECKLISTBOX_95     BITMAP  DISCARDABLE     "res\\95check.bmp"
-
-
-Also note that you can only build and run in "Release" configuration; the "debug" configuration is not supported.
-
