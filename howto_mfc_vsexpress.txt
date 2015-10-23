@@ -10,7 +10,7 @@ Then, in Visual Studio Express, go to : Tools / Options / Projects and Solutions
 -Include files
 Here, add in two new blank lines :
 C:\WinDDK\7600.16385.1\inc\mfc42
-C:\WinDDK\7600.16385.1\inc\atl30
+C:\WinDDK\7600.16385.1\inc\atl71
 
 -Library files
 Here, add in two new blank lines :
