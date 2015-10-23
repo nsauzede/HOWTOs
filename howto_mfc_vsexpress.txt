@@ -5,29 +5,38 @@ http://www.codeproject.com/Articles/30439/How-to-compile-MFC-code-in-Visual-C-Ex
 
 Shortly : download and install Windows DDK from microsoft website :
 https://www.microsoft.com/en-us/download/details.aspx?id=11800
-Then, in Visual Studio Express, go to : Tools / Options / Projects and Solutions / VC++ Directories / Win32 :
 
+Then, in Visual Studio Express, go to : Tools / Options / Projects and Solutions / VC++ Directories / Win32 :
 -Include files
 Here, add in two new blank lines :
 C:\WinDDK\7600.16385.1\inc\mfc42
 C:\WinDDK\7600.16385.1\inc\atl71
-
 -Library files
 Here, add in two new blank lines :
 C:\WinDDK\7600.16385.1\lib\Mfc\i386
 C:\WinDDK\7600.16385.1\lib\Atl\i386
 
-Note : if you have some localized resources, eg: in <project>.rc, you have :
+Then, in your MFC project properties :
+Configuration : All configurations
+Configuration Properties : General
+Use of MFC : Use MFC in a Shared DLL
 
+Note : if you have some localized resources, eg: in <project>.rc, you have :
 ..
 //#include "l.fra\afxres.rc"          // Standard components
 ..
-
 With whatever language you use (here : french), just replace line by :
-
 ..
 #include "afxres.rc"          // Standard components
 ..
 
-Also : note that you can only build and run in "Release" configuration; the "debug" configuration is not supported.
+Note : if you have dependencies on old system resources no longer available, comment out those kind of lines :
+//AFX_IDC_CONTEXTHELP     CURSOR  DISCARDABLE     "res\\help.cur"
+//26567 BITMAP "res\\3dcheck.bmp" // Note: 26567 comes from CTL3D.H
+//AFX_IDB_MINIFRAME_MENU      BITMAP  DISCARDABLE     "res\\minifwnd.bmp"
+//AFX_IDB_CHECKLISTBOX_NT     BITMAP  DISCARDABLE     "res\\ntcheck.bmp"
+//AFX_IDB_CHECKLISTBOX_95     BITMAP  DISCARDABLE     "res\\95check.bmp"
+
+
+Also note that you can only build and run in "Release" configuration; the "debug" configuration is not supported.
 
