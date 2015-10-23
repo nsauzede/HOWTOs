@@ -13,8 +13,9 @@ C:\WinDDK\7600.16385.1\inc\mfc42
 C:\WinDDK\7600.16385.1\inc\atl30
 
 -Library files
-Here, add in a new blank line :
+Here, add in two new blank lines :
 C:\WinDDK\7600.16385.1\lib\Mfc\i386
+C:\WinDDK\7600.16385.1\lib\Atl\i386
 
 Note : if you have some localized resources, eg: in <project>.rc, you have :
 
