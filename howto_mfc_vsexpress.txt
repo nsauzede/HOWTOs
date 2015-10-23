@@ -3,7 +3,8 @@
 See here :
 http://www.codeproject.com/Articles/30439/How-to-compile-MFC-code-in-Visual-C-Express
 
-Shortly : download and install Windows DDK from microsoft website
+Shortly : download and install Windows DDK from microsoft website :
+https://www.microsoft.com/en-us/download/details.aspx?id=11800
 Then, in Visual Studio Express, go to : Tools / Options / Projects and Solutions / VC++ Directories / Win32 :
 
 -Include files
