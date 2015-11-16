@@ -1,6 +1,6 @@
 
 -with Valgrind :
-valgrind --tool=callgrind -v ./app args..
+valgrind --tool=callgrind --dump-instr=yes -v ./app args..
 
 kcachegrind callgrind.out.xyz
 
