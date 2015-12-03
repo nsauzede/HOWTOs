@@ -1,0 +1,5 @@
+If you VNC session is frozen, ie: black mouse cursor moves, but no click have any efect,
+you may have a mouse focus locked issue
+
+workaround : in VNC client toolbar : choose "Send Ctrl+Alt+Del"
+enter your password to unlock the screen
