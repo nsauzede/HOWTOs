@@ -1,0 +1,17 @@
+
+create your GPG keypair:
+==========================
+$ gpg --gen-key
+<accept default : RSA and RSA>
+<choose maximum size 4096b>
+<choose never expire 0>
+<Enter Name & email>
+
+create compressed crypted document for a given recipient :
+=============================================================
+1) first import recipient's public key :
+$ gpg --import recipient_gpg.txt
+2) compress document => document.bz2
+$ bzip2 document
+3) encrypt
+$ gpg --output document.gpg --encrypt --recipient "your_recipient@domain" document.bz2
