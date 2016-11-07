@@ -1,3 +1,14 @@
+
+Howto to totally remove file(s) from history:
+---------------------------------------------
+https://help.github.com/articles/remove-sensitive-data/
+=> from the top-level of the working tree :
+$ git filter-branch --force --index-filter \
+'git rm --cached --ignore-unmatch PATH-TO-YOUR-FILE-WITH-SENSITIVE-DATA' \
+--prune-empty --tag-name-filter cat -- --all
+
+Garbage collector ?
+-------------------
 rm -rf .git/refs/original/refs/
 rm -rf .git/logs/refs/
 git reset --hard
