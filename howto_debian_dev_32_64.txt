@@ -3,3 +3,6 @@ apt-get update
 
 (apt-get install ia32-libs)
 apt-get install libc6-dev-i386
+
+for c++11/32 suport on 64:
+apt install g++-multilib
