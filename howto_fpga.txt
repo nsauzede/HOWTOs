@@ -1,0 +1,10 @@
+
+Altera
+========
+Difference between *.SOF and *.POF :
+.sof will program in RAM (volatile)
+.pof will program in flash (persistent)
+
+Max1000
+========
+Can be powered with 5V either via micro-usb, or by VIN pin
